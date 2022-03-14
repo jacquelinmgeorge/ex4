@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="This is the Fourth Experiment of Web-Technology Lab">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <title>URK19CS1189 Ex-4</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                font-family: 'Open Sans', sans-serif;
+            }
+            .div1{   
+                background-image:linear-gradient(rgba(0, 0, 0, 0.727),rgba(0, 0, 0, 0.6)) , url("https://miro.medium.com/max/1400/1*98iiAnkKsikPsXfNBvz0qQ.png");
+                min-height: 355px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }     
+            .Eliza 
+            {
+                position:absolute;
+                top: 25px;
+                left: 35px;
+                z-index: 1;
+            }
+            .Lindsey 
+            {
+                position:absolute;
+                top: 185px;
+                left: 195px;
+                z-index: 2;
+            }
+            .Bob 
+            {
+                position:absolute;
+                top: 100px;
+                left: 110px;
+                z-index: 3;
+            }
+
+            .div1 img {
+                border-radius: 12px;
+            }
+            .navbar {
+                overflow: hidden;
+                background-color: #121212;
+                color:whitesmoke;
+                top: 0;
+                width: 100%;
+                padding:10px;
+            }
+            .navbar a {
+                float: left;
+                width:25%;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 15px 15px;
+                text-decoration: none;
+                font-size: 20px;
+            }
+            .navbar a:hover {
+                border-radius: 12px;
+                background: #745a28;
+                color: black;
+            }
+            .table{
+                background-image:linear-gradient( rgba(0, 0, 0, 0.727) 100%, rgba(0, 0, 0, 0.5)100%) , url("https://4.bp.blogspot.com/-Iyl41aQ7zsw/Xr7RzKZLTnI/AAAAAAACeLw/bC4pPzL-GYYeomS33-l3ZpIVi5XH0Q8DQCLcBGAsYHQ/w1200-h630-p-k-no-nu/the-100-season-7-poster.jpg");
+                min-height: 720px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                padding:100px 25px 25px 200px;
+            }
+            table{
+                table-layout: fixed;
+                border-collapse: separate;
+                border-spacing: 0;
+                min-width: 600px;
+                color:white;
+            }
+            table tr th,
+            table tr td {
+                border-right: none;
+                border-bottom: 1px solid black;
+                padding: 10px;
+                text-align: center;
+            }
+            table tr th:first-child,
+            table tr td:first-child {
+                border-left: 1px solid black;            }
+            table tr th:last-child,
+            table tr td:last-child {
+                border-right: 1px solid black;
+            }
+            table tr th {
+                border-top: 1px solid black;
+            }
+            table tr:first-child th:first-child {
+                border-top-left-radius: 20px;
+            }
+            table tr:first-child th:last-child {
+                border-top-right-radius: 20px;
+            }
+            table tr:last-child td:first-child {
+                border-bottom-left-radius: 20px;
+            }
+            table tr:last-child td:last-child {
+                border-bottom-right-radius: 20px;
+            }
+            tr:nth-child(odd) {
+                background-color: #050505;
+            }
+            tr:nth-child(even) {
+                background-color: #745a28;
+            }
+            .div2{
+                background-image:linear-gradient(rgba(0, 0, 0, 0.727),rgba(0, 0, 0, 0.5)) , url("http://atlantablackstar.com/wp-content/uploads/2014/12/latest.jpg");
+                min-height: 800px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            .container1 {
+                border-radius: 20px;
+                position: absolute;
+                top:20%;
+                left: 10%;
+                margin: 20px;
+                max-width: 500px;
+                padding: 16px;
+                background-color: white;
+            }     
+            .container2 {
+                border-radius: 20px;
+                position: absolute;
+                right: 10%;
+                top:20%;
+                margin: 20px;
+                max-width: 500px;
+                padding: 16px;
+                background-color: white;
+            }
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+            }
+            input[type=text]:focus, input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+            /* Set a style for the submit button */
+            .btn {
+                background-color: #745a28;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+            }
+            .btn:hover {
+                opacity: 1;
+            }
+            .footer{
+                padding: 50px 50px 50px 50px;
+                font-size: 15px;
+                background-color: khaki;
+            }    
+            @media screen and (max-width: 900px){
+                .div1 img{
+                    width:100px;
+                    height:100px;
+                }
+                table{
+                    min-width: 400px;
+                }
+                .table{
+                    padding:25px;
+                }             
+                .container1{
+                    max-width: 175px;
+                    left:5px;
+                }
+                .container2{
+                    max-width: 175px;
+                    right:5px;
+                }
+            }           
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <div class="div1">
+                <a href="https://en.wikipedia.org/wiki/Clarke_Griffin" target="_blank"><img width="160" height="160" src="https://www.tvinsider.com/wp-content/uploads/2019/05/HUN604B_0716r-1-855x570.jpg" class="Eliza" alt="Eliza Taylor"/></a>
+                <a href="https://en.wikipedia.org/wiki/Lindsey_Morgan" target="_blank"><img width="160" height="160" src="http://pm1.narvii.com/7606/ec92dc62462780ad5a6703a9e53832e4030f00d3r1-528-747v2_uhq.jpg" class="Lindsey" alt="Lindsey Morgan"/></a>
+                <a href="https://en.wikipedia.org/wiki/Bob_Morley" target="_blank"><img width="160" height="160" src="https://pbs.twimg.com/media/EFF5fQ9X4AA5Hzo.jpg" class="Bob" alt="Bob Morley"/></a>
+            </div>
+            <div class="navbar">
+                <a href="https://www.imdb.com/title/tt2661044/" target="_blank">IMDB</a>
+                <a href="https://www.netflix.com/search?q=100&jbv=70283264" target="_blank">Netflix</a>
+                <a href="https://en.wikipedia.org/wiki/The_100_(TV_series)" target="_blank">Wikipedia</a>
+                <a href="https://www.instagram.com/cw_the100/?hl=en" target="_blank">Instagram</a>
+            </div>
+            <div class="table" >
+                <table  >
+                    <tr>
+                        <th colspan="2">Series</th>
+                    </tr>
+                    <tr>
+                        <td>The 100-Season 1</td>
+                        <td><a href="https://www.netflix.com/search?q=100&jbv=70283264" target="_blank"><img height="80" width="80" src="https://flxt.tmsimg.com/assets/p9980545_b1t_h10_aa.jpg" alt="The 100"></a></td>
+                    </tr>
+                    <tr>
+                        <td>The 100-Season 2</td>
+                        <td><a href="https://www.netflix.com/search?q=100&jbv=70283264" target="_blank"><img height="80" width="80" src="https://tvshows.show/wp-content/uploads/The-100-season-2-poster.jpg" alt="The 100"></a></td>
+                    </tr>
+                    <tr>
+                        <td>The 100-Season 3</td>
+                        <td><a href="https://www.netflix.com/search?q=100&jbv=70283264" target="_blank"><img height="80" width="80" src="http://images6.fanpop.com/image/photos/39200000/Season-3-the-100-tv-show-39218006-540-800.png" alt="The 100"></a></td>
+                    </tr>
+                    <tr>
+                        <td>The 100-Season 4</td>
+                        <td><a href="https://www.netflix.com/search?q=100&jbv=70283264" target="_blank"><img height="80" width="80" src="https://i.pinimg.com/474x/a8/35/a1/a835a12e94d884f562421a525febd633.jpg" alt="The 100"></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="div2">
+                <form action="/action_page.php" class="container1">
+                    <h1>Sign In</h1>
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname">
+                    <label for="psw1"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw1">
+                    <button type="submit" class="btn">Sign In</button>
+                </form>
+                <form action="/action_page.php" class="container2">
+                    <h1>Sign Up</h1>
+                    <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Enter Name" name="name" >
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email">
+
+                    <label for="psw2"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw2">
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+            </div>
+            <div class="footer">
+                <footer>
+                    &copy; 2021-2022. (URK19CS1189) - Web Technology Lab Batch 4 (Ex-4)
+                </footer>
+            </div>
+        </fieldset>
+    </body>
